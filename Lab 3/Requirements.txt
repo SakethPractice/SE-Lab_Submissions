@@ -1,0 +1,55 @@
+REQUIREMENTS TABLE
+
+FUNCTIONAL REQUIREMENTS
+
+FR-01
+Type: Functional
+Description: The system shall allow a Student Founder to create a crowdfunding campaign by providing venture details, funding target, campaign duration, and predefined project milestones.
+Priority: High
+Acceptance Criteria: Pass - Campaign is successfully created when all mandatory details are provided and is made available to backers. Fail - Campaign is created with missing mandatory information.
+Rationale: Enables student founders to present their ventures and seek funding through the crowdfunding platform.
+
+FR-02
+Type: Functional
+Description: The system shall allow a Campaign Backer to select an active campaign, choose a reward tier, and make a financial pledge through the payment gateway.
+Priority: High
+Acceptance Criteria: Pass - Valid payment is authorized and the pledge is recorded against the selected campaign and reward tier. Fail - A failed or invalid payment is recorded as a successful pledge.
+Rationale: Allows backers to financially support student ventures while selecting an appropriate reward tier.
+
+FR-03
+Type: Functional
+Description: The system shall allow a Student Founder to submit evidence of completed project milestones for review by the Faculty Committee.
+Priority: High
+Acceptance Criteria: Pass - Submitted milestone evidence is made available to the Faculty Committee for review and receives an approval or rejection status. Fail - A milestone is marked as verified without Faculty Committee review.
+Rationale: Ensures that project progress is verified before funds are released to the student venture.
+
+FR-04
+Type: Functional
+Description: The system shall release campaign funds to the student venture in predefined tranches only after the corresponding project milestone has been approved by the Faculty Committee.
+Priority: High
+Acceptance Criteria: Pass - The corresponding tranche is released only after milestone approval. Fail - Funds are released before the required milestone approval.
+Rationale: Provides controlled and accountable disbursement of crowdfunding funds based on verified project progress.
+
+FR-05
+Type: Functional
+Description: The system shall allow a Campaign Backer to view campaign progress, funding status, milestones, pledge details, and selected reward tier.
+Priority: Medium
+Acceptance Criteria: Pass - The Campaign Backer can view accurate and updated campaign and pledge information. Fail - Incorrect or outdated campaign information is displayed.
+Rationale: Provides transparency to backers regarding the progress and funding status of the student venture.
+
+
+NON-FUNCTIONAL REQUIREMENTS
+
+NFR-01
+Type: Performance & Security
+Description: The payment processing component shall securely process pledge payments using tokenized payment authorizations and comply with applicable PCI-DSS requirements.
+Priority: High
+Acceptance Criteria: Pass - Security and benchmarking tests confirm tokenized payment processing, applicable PCI-DSS compliance, and acceptable performance under simulated peak load. Fail - Payment information is stored insecurely or security requirements are violated.
+Rationale: Protects sensitive financial information and reduces security risks associated with payment processing.
+
+NFR-02
+Type: Performance & Availability
+Description: The system shall maintain reliable availability and provide responsive access to campaign, pledge, milestone, and tracking functions during normal and peak usage.
+Priority: High
+Acceptance Criteria: Pass - Load testing demonstrates that the system meets the defined response-time and availability targets under expected peak load. Fail - Requests consistently exceed the target response time or the system becomes unavailable.
+Rationale: Ensures that users can reliably access the crowdfunding platform even when campaigns experience high traffic.

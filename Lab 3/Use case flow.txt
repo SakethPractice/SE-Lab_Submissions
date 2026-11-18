@@ -1,0 +1,56 @@
+Use Case ID: UC-02
+Use Case Name: Make Pledge
+Primary Actor: Campaign Backer
+Supporting Actor: Payment Gateway
+
+Preconditions
+
+1. The Campaign Backer has accessed the crowdfunding platform.
+2. An active crowdfunding campaign is available and accepting pledges.
+3. At least one reward tier is available for the selected campaign.
+4. The payment gateway is available for processing payments.
+5. The Campaign Backer has valid payment information.
+
+Postconditions
+
+Success:
+
+1. The pledge is successfully recorded against the selected campaign.
+2. The selected reward tier is associated with the pledge.
+3. The payment is successfully authorized.
+4. The campaign's funding amount is updated.
+5. The Campaign Backer can view the updated pledge status.
+
+Failure:
+
+1. The pledge is not recorded as successful.
+2. The campaign's funding amount remains unchanged.
+3. The Campaign Backer is informed that the payment failed.
+
+Main Success Scenario
+
+1. The Campaign Backer selects an active crowdfunding campaign.
+2. The system displays the campaign details, funding target, current funding status, milestones, and available reward tiers.
+3. The Campaign Backer selects a preferred reward tier.
+4. The Campaign Backer enters the pledge amount and payment details.
+5. The system validates the pledge information.
+6. The system sends the payment authorization request to the Payment Gateway.
+7. The Payment Gateway validates and authorizes the payment.
+8. The system records the successful pledge.
+9. The system updates the campaign's current funding amount.
+10. The system displays a pledge confirmation to the Campaign Backer.
+11. The Campaign Backer can view the pledge and selected reward tier through the campaign tracking interface.
+
+Alternate Flow – Payment Failure
+
+At Step 7:
+
+1. The Payment Gateway rejects the payment because of invalid payment details, insufficient funds, or another payment-processing failure.
+2. The system does not record the pledge as successful.
+3. The system does not increase the campaign's funding amount.
+4. The system displays a payment failure message to the Campaign Backer.
+5. The Campaign Backer may enter valid payment details and retry the pledge.
+
+Result:
+
+The use case is successfully completed when the payment is authorized and the pledge is recorded. If payment authorization fails, the pledge remains unsuccessful and the Campaign Backer is allowed to retry the transaction.
